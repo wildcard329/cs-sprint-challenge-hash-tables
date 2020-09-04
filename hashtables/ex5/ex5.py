@@ -7,7 +7,19 @@ def finder(files, queries):
     YOUR CODE HERE
     """
     # Your code here
+    qu = {}
+    result = []
+    for q in queries:
+        qu[q] = q
 
+    for f in files:
+        length = len(q)
+        if f[-length:] in qu:
+            result.append(f)
+        length = len(q) - 1
+        if f[-length:] in qu:
+            result.append(f)
+    print(sorted(result))
     return result
 
 

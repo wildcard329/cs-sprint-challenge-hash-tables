@@ -11,9 +11,7 @@ def reconstruct_trip(tickets, length):
     itinerary = {}
     route = []
     for ticket in tickets:
-        # print(ticket.source, ticket.destination)
         itinerary[ticket.source] = ticket.destination
-    print(itinerary)
 
     start = itinerary.get('NONE')
     route.append(start)
